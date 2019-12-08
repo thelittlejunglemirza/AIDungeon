@@ -44,8 +44,8 @@ class GPT2Generator:
             temperature=temperature, top_k=top_k, top_p=top_p
         )
 
-        saver = tf.train.Saver()
-        ckpt = tf.train.latest_checkpoint(os.path.join(models_dir, self.model_name))
+        # saver = tf.train.Saver()
+        # ckpt = tf.train.latest_checkpoint(os.path.join(models_dir, self.model_name))
         saver.restore(self.sess, ckpt)
 
     def prompt_replace(self, prompt):
